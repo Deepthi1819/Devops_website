@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'home')">Home</button>
+            <button class="tablinks" onclick="openTab(event, 'about')">About Us</button>
+            <button class="tablinks" onclick="openTab(event, 'career')">Career</button>
+            <button class="tablinks" onclick="openTab(event, 'services')">Services</button>
+            <button class="tablinks" onclick="openTab(event, 'contact')">Contact Us</button>
+        </div>
+        <div id="home" class="tabcontent">
+            <h2>Welcome to DevOps Home</h2>
+            <!-- Placeholder for DevOps content and images -->
+            <img src="Images/Devops_lifecycle.jpg" alt="Devops_lifecycle" >
+            <p>Content about DevOps tools and DevOps life images goes here.</p>
+            <p>Advantages of DevOps:</p>
+            <ul>
+                <li>Improved collaboration between teams</li>
+                <li>Increased deployment frequency</li>
+                <li>Enhanced efficiency and productivity</li>
+            </ul>
+            <p>Disadvantages of DevOps:</p>
+            <ul>
+                <li>Complexity in implementation</li>
+                <li>Requires cultural change within organizations</li>
+                <li>Security concerns</li>
+            </ul>
+        </div>
+        <div id="about" class="tabcontent">
+            <h2>About Us</h2>
+            <!-- Placeholder for about us content -->
+            <p>This is where you can find information about our company and team.</p>
+        </div>
+        <div id="career" class="tabcontent">
+            <h2>Career</h2>
+            <!-- Placeholder for career opportunities -->
+            <p>Explore career opportunities with us!</p>
+        </div>
+        <div id="services" class="tabcontent">
+            <h2>Services</h2>
+            <!-- Placeholder for services offered -->
+            <p>Discover the range of services we provide.</p>
+        </div>
+        <div id="contact" class="tabcontent">
+            <h2>Contact Us</h2>
+            <!-- Placeholder for contact information -->
+            <p>Get in touch with us for inquiries or feedback.</p>
+        </div>
+    </div>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
